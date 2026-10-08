@@ -159,7 +159,7 @@ export const Hero: React.FC = () => {
               <select
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="w-full bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37] appearance-none"
+                className="w-full min-w-0 bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37] appearance-none"
               >
                 <option value="Dubai International Airport (DXB)">
                   Dubai Intl Airport (DXB)
@@ -191,7 +191,7 @@ export const Hero: React.FC = () => {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37] appearance-none"
+                className="w-full min-w-0 bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37] appearance-none"
               >
                 {fleetCategories.map((cat) => (
                   <option key={cat.id} value={cat.id}>
@@ -211,7 +211,7 @@ export const Hero: React.FC = () => {
                 type="date"
                 value={pickupDate}
                 onChange={(e) => setPickupDate(e.target.value)}
-                className="w-full bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
+                className="w-full min-w-0 bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
               />
             </div>
 
@@ -225,7 +225,7 @@ export const Hero: React.FC = () => {
                 type="date"
                 value={returnDate}
                 onChange={(e) => setReturnDate(e.target.value)}
-                className="w-full bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
+                className="w-full min-w-0 bg-[#121212] border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
               />
             </div>
 
