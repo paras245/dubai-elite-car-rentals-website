@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-ui: 'Poppins', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-arabic: 'Cairo', system-ui, sans-serif;
+  }
+}
+
+:root {
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8CF72;
+  --color-gold-dark: #A8862A;
+  --color-gold-gradient: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #A8862A 100%);
+  --color-dark-bg: #0A0A0A;
+  --color-charcoal: #151515;
+}
+
+[dir="rtl"] {
+  font-family: 'Cairo', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(20, 20, 20, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF0BA 0%, #D4AF37 50%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #A8862A 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.22);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.12);
+}
+
+/* Marble subtle background effect */
+.bg-marble-luxury {
+  background-color: #0A0A0A;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.03) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.015) 0px, transparent 60%);
+}
+
+/* Continuous seamless horizontal marquee */
+@keyframes seamlessMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: seamlessMarquee 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}

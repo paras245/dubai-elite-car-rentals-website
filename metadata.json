@@ -1,0 +1,6 @@
+{
+  "name": "Dubai Elite Car Rentals",
+  "description": "Dubai's premier luxury car rental service. Experience supercars, hypercars, and chauffeur luxury across the UAE.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
