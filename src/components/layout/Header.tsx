@@ -4,6 +4,7 @@ import { Phone, MessageCircle, Menu, X, Globe } from 'lucide-react';
 import { siteConfig } from '../../data/site.config';
 import { useLanguage } from '../../context/LanguageContext';
 import { SocialIcons } from '../shared/SocialIcons';
+import logoImg from '../../assets/logo.png';
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -47,19 +48,12 @@ export const Header: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
-            {/* Zone 1: Brand Wordmark */}
+            {/* Zone 1: Brand Logo */}
             <Link
               to="/"
-              className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded"
+              className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded"
             >
-              <div className="w-8 h-8 rounded-xl border border-[#D4AF37] flex items-center justify-center bg-black/60 group-hover:border-[#F3E5AB] transition-colors shadow-md shadow-[#D4AF37]/20">
-                <span className="text-[#D4AF37] font-serif font-bold text-xs tracking-widest">DE</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-[#D4AF37] transition-colors whitespace-nowrap">
-                  DUBAI ELITE
-                </span>
-              </div>
+              <img src={logoImg} alt="Dubai Elite" className="h-10 sm:h-12 object-contain drop-shadow-md group-hover:brightness-110 transition-all" />
             </Link>
 
             {/* Zone 2: Navigation Links (Desktop) */}

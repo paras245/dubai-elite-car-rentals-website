@@ -12,6 +12,7 @@ import {
 import { siteConfig } from '../../data/site.config';
 import { useLanguage } from '../../context/LanguageContext';
 import { SocialIcons } from '../shared/SocialIcons';
+import logoImg from '../../assets/logo.png';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -30,12 +31,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Profile Information */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl border border-[#D4AF37] flex items-center justify-center bg-black/60 shadow-lg shadow-[#D4AF37]/20">
-                <span className="text-[#D4AF37] font-serif font-bold text-base">DE</span>
-              </div>
-              <span className="font-serif text-xl font-bold tracking-wider text-white">
-                DUBAI ELITE
-              </span>
+              <img src={logoImg} alt="Dubai Elite" className="h-14 object-contain drop-shadow-md" />
             </div>
             <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
               {t(
